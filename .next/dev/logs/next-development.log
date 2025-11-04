@@ -1,0 +1,219 @@
+[00:00:01.988] Server  LOG      ✓ Ready in 1391ms
+[00:08:41.906] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:08:41.909] Server  LOG      ✓ Compiled in 32.3s
+[00:08:41.929] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+  Process output:
+  
+  Process error output:
+[00:08:41.977] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:08:42.004] Server  ERROR   Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:10:26.868] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:10:26.872] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+  Process output:
+  
+  Process error output:
+[00:10:26.899] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:10:26.925] Server  ERROR   Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:12:31.040] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:12:31.043] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+  Process output:
+  
+  Process error output:
+[00:12:31.069] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:12:31.097] Server  ERROR   Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:12:32.425] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:12:32.429] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+  Process output:
+  
+  Process error output:
+[00:12:32.464] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:12:32.488] Server  ERROR   Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:13:14.090] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:13:14.094] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+  Process output:
+  
+  Process error output:
+[00:13:14.124] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:13:14.147] Server  ERROR   Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:13:15.893] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:13:15.895] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/how-your-world/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- creating new process
+- node process exited before we could connect to it with exit code: 0xc0000142
+  Process output:
+  
+  Process error output:
+[00:13:15.916] Server  ERROR    ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:13:15.936] Server  ERROR   Error: ENOENT: no such file or directory, open 'C:\Users\alienware\how-your-world\.next\dev\server\pages\_app\build-manifest.json'
+[00:07:14.304] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:20.291] Server  LOG      ✓ Compiled in 91ms
+[00:09:38.492] Server  LOG      ✓ Compiled in 936ms
+[00:09:52.570] Server  LOG      ✓ Compiled in 71ms
+[00:10:24.119] Server  LOG      ✓ Compiled in 79ms
+[00:11:57.352] Server  LOG      ✓ Compiled in 121ms
+[00:12:19.504] Server  LOG      ✓ Compiled in 1418ms
+[00:13:59.037] Server  LOG      ✓ Compiled in 169ms
+[00:14:18.826] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:36.162] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:02.673] Server  LOG      ✓ Compiled in 131ms
+[00:15:17.746] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:21.918] Server  LOG      ✓ Compiled in 117ms
+[00:16:26.887] Server  LOG      ✓ Compiled in 114ms
+[00:17:53.760] Server  LOG      ✓ Compiled in 114ms
+[00:19:02.588] Server  LOG      ✓ Compiled in 124ms
+[00:19:34.549] Server  LOG      ✓ Compiled in 152ms
+[00:22:49.372] Server  LOG      ✓ Compiled in 147ms
+[00:24:07.790] Server  LOG      ✓ Compiled in 116ms
+[00:24:46.715] Server  LOG      ✓ Compiled in 102ms
+[00:25:13.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:35.773] Server  LOG      ✓ Compiled in 128ms
+[00:25:44.608] Server  LOG      ✓ Compiled in 111ms
+[00:26:06.275] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:45.714] Server  LOG      ✓ Compiled in 93ms
+[00:27:02.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:17.670] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:25.404] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:32.470] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:19.857] Server  LOG      ✓ Compiled in 112ms
+[00:28:55.131] Server  LOG      ✓ Compiled in 136ms
