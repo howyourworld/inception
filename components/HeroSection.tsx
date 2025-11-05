@@ -1,17 +1,75 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import AnimatedGradientText from './AnimatedGradientText';
 import GlassShimmer from './GlassShimmer';
 
 export default function HeroSection() {
   const [inputValue, setInputValue] = useState('');
 
+  // Memoize animation variants for better performance
+  const gradientAnimation = useMemo(() => ({
+    y: ['100%', '-150%'],
+    opacity: [0.5, 0.7, 0.5],
+  }), []);
+
+  const gradientAnimationRight = useMemo(() => ({
+    y: ['150%', '-100%'],
+    opacity: [0.5, 0.7, 0.5],
+  }), []);
+
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-white" aria-label="Hero section">
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary-lighter/20 via-white to-white" />
+
+      {/* SVG Filter for Soft Organic Edges */}
+      <svg className="absolute w-0 h-0">
+        <defs>
+          <filter id="organic-blur">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" seed="2" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G" />
+            <feGaussianBlur stdDeviation="12" />
+          </filter>
+        </defs>
+      </svg>
+
+      {/* Left Edge Gradient - Soft Pastel */}
+      <div className="absolute left-0 top-0 bottom-0 w-64 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={gradientAnimation}
+          transition={{
+            y: { duration: 8, repeat: Infinity, ease: 'linear', repeatDelay: 0 },
+            opacity: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
+          }}
+          className="absolute w-full h-[75vh]"
+          style={{
+            left: '-15%',
+            background: 'radial-gradient(ellipse 150% 100% at 25% center, rgba(255, 182, 193, 0.4) 0%, rgba(255, 218, 224, 0.45) 18%, rgba(230, 190, 255, 0.4) 38%, rgba(179, 229, 252, 0.35) 58%, rgba(204, 229, 255, 0.25) 78%, transparent 95%)',
+            filter: 'blur(45px) url(#organic-blur)',
+            willChange: 'transform, opacity',
+          }}
+        />
+      </div>
+
+      {/* Right Edge Gradient - Soft Pastel */}
+      <div className="absolute right-0 top-0 bottom-0 w-64 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={gradientAnimationRight}
+          transition={{
+            y: { duration: 8, repeat: Infinity, ease: 'linear', repeatDelay: 0, delay: 4 },
+            opacity: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 },
+          }}
+          className="absolute w-full h-[75vh]"
+          style={{
+            right: '-15%',
+            background: 'radial-gradient(ellipse 150% 100% at 75% center, rgba(179, 229, 252, 0.4) 0%, rgba(204, 255, 229, 0.45) 18%, rgba(255, 235, 186, 0.4) 38%, rgba(255, 218, 224, 0.35) 58%, rgba(255, 200, 221, 0.25) 78%, transparent 95%)',
+            filter: 'blur(45px) url(#organic-blur)',
+            willChange: 'transform, opacity',
+          }}
+        />
+      </div>
 
       {/* Glass Shimmer Effect */}
       <GlassShimmer />
@@ -41,7 +99,7 @@ export default function HeroSection() {
               duration: 0.8,
               ease: [0.16, 1, 0.3, 1]
             }}
-            className="flex flex-col items-center justify-center space-y-6 sm:space-y-8"
+            className="flex flex-col items-center justify-center space-y-8 sm:space-y-10"
           >
             {/* Overline */}
             <motion.p
@@ -58,14 +116,14 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="w-full text-center"
+              className="w-full text-center px-4"
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-gray-900 leading-tight inline">
-                How Your World{' '}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.15]">
+                <span className="text-gray-900 block mb-2">How Your World</span>
+                <span className="block">
+                  <AnimatedGradientText />
+                </span>
               </h1>
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-tight inline-block">
-                <AnimatedGradientText />
-              </span>
             </motion.div>
 
             {/* Subheadline */}

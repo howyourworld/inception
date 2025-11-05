@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,16 +33,16 @@ export default function Navigation() {
     };
   }, [isMobileMenuOpen]);
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { name: 'Live', href: '#live' },
     { name: 'Travel', href: '#travel' },
     { name: 'Connect', href: '#connect' },
     { name: 'Documents', href: '#documents' },
-  ];
+  ], []);
 
-  const handleNavClick = () => {
+  const handleNavClick = useCallback(() => {
     setIsMobileMenuOpen(false);
-  };
+  }, []);
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function Navigation() {
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: isMobileMenuOpen ? 0 : 1, x: 0 }}
               className="cursor-pointer z-10"
             >
               <h1 className="text-base sm:text-lg font-semibold text-gray-900 tracking-tight">
@@ -93,9 +93,9 @@ export default function Navigation() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="hidden md:block bg-primary hover:bg-primary-dark text-white text-sm font-medium px-5 py-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              aria-label="Get started"
+              aria-label="Explore"
             >
-              Get Started
+              Explore
             </motion.button>
 
             {/* Mobile Menu Button */}
@@ -152,11 +152,11 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="absolute right-0 top-0 bottom-0 w-[280px] bg-white shadow-2xl"
+              className="absolute right-0 top-0 h-full w-[280px] bg-white shadow-2xl overflow-hidden"
             >
-              <div className="flex flex-col h-full pt-20 px-6 pb-6">
+              <div className="flex flex-col h-full pt-20 px-6 pb-8">
                 {/* Mobile Nav Items */}
-                <nav className="flex-1 space-y-1">
+                <nav className="flex-1 space-y-2 overflow-y-auto">
                   {navItems.map((item, index) => (
                     <motion.a
                       key={item.name}
@@ -173,15 +173,17 @@ export default function Navigation() {
                 </nav>
 
                 {/* Mobile CTA Button */}
-                <motion.button
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  onClick={handleNavClick}
-                  className="w-full bg-primary hover:bg-primary-dark text-white text-base font-medium px-6 py-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                >
-                  Get Started
-                </motion.button>
+                <div className="pt-6 mt-auto">
+                  <motion.button
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    onClick={handleNavClick}
+                    className="w-full bg-primary hover:bg-primary-dark text-white text-base font-medium px-6 py-3.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  >
+                    Explore
+                  </motion.button>
+                </div>
               </div>
             </motion.div>
           </motion.div>

@@ -35,6 +35,7 @@ body {
 /* Performance: GPU acceleration hints for animated elements */
 [class*="motion-"] {
   will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 /* Optimize transforms with GPU acceleration */
@@ -42,6 +43,11 @@ body {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+/* Improve rendering performance */
+img, video, iframe {
+  content-visibility: auto;
 }
 
 @layer components {

@@ -4,20 +4,20 @@ globalThis.__BUILD_MANIFEST = {
   },
   "devFiles": [],
   "polyfillFiles": [
-    "static/chunks/eccb4_next_dist_build_polyfills_polyfill-nomodule.js"
+    "static/chunks/ceb85_next_dist_build_polyfills_polyfill-nomodule.js"
   ],
   "lowPriorityFiles": [],
   "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_a48545ce._.js",
-    "static/chunks/eccb4_next_dist_compiled_react-dom_a566478f._.js",
-    "static/chunks/eccb4_next_dist_compiled_react-server-dom-turbopack_29907069._.js",
-    "static/chunks/eccb4_next_dist_compiled_next-devtools_index_c2f9a0b8.js",
-    "static/chunks/eccb4_next_dist_compiled_7bb2c1e5._.js",
-    "static/chunks/eccb4_next_dist_client_6c7a849b._.js",
-    "static/chunks/eccb4_next_dist_a097784e._.js",
-    "static/chunks/eccb4_@swc_helpers_cjs_b71f9225._.js",
-    "static/chunks/how-your-world_a0ff3932._.js",
-    "static/chunks/turbopack-how-your-world_93ea1b20._.js"
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_88d9ef3b._.js",
+    "static/chunks/ceb85_next_dist_compiled_react-dom_8008db5d._.js",
+    "static/chunks/ceb85_next_dist_compiled_react-server-dom-turbopack_9f4dae87._.js",
+    "static/chunks/ceb85_next_dist_compiled_next-devtools_index_45dc23dc.js",
+    "static/chunks/ceb85_next_dist_compiled_c9df47b0._.js",
+    "static/chunks/ceb85_next_dist_client_866b42ac._.js",
+    "static/chunks/ceb85_next_dist_70c0cc47._.js",
+    "static/chunks/ceb85_@swc_helpers_cjs_213804be._.js",
+    "static/chunks/Desktop_sites_backup_a0ff3932._.js",
+    "static/chunks/turbopack-Desktop_sites_backup_92219669._.js"
   ]
 };
 globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
