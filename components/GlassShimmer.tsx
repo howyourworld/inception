@@ -1,23 +1,27 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 export default function GlassShimmer() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  // Optional: Track mouse for subtle parallax
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+  // Throttled mouse tracking for better performance
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    // Use requestAnimationFrame for smooth updates
+    requestAnimationFrame(() => {
       setMousePosition({
         x: (e.clientX / window.innerWidth - 0.5) * 20,
         y: (e.clientY / window.innerHeight - 0.5) * 20,
       });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    });
   }, []);
+
+  useEffect(() => {
+    // Passive event listener for better scroll performance
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [handleMouseMove]);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -35,6 +39,7 @@ export default function GlassShimmer() {
         style={{
           x: mousePosition.x * 0.5,
           y: mousePosition.y * 0.5,
+          willChange: 'transform',
         }}
         className="absolute -top-1/2 -left-1/2 w-[150%] h-[150%]"
       >
@@ -44,6 +49,7 @@ export default function GlassShimmer() {
             background:
               'radial-gradient(circle, rgba(0, 122, 255, 0.3) 0%, transparent 70%)',
             mixBlendMode: 'screen',
+            transform: 'translateZ(0)',
           }}
         />
       </motion.div>

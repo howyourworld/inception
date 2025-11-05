@@ -52,7 +52,7 @@ export default function AnimatedGradientText() {
       }}
     >
       {/* Invisible placeholder to maintain height */}
-      <span className="invisible whitespace-nowrap leading-none">
+      <span className="invisible whitespace-nowrap">
         {words[0]}
       </span>
       <AnimatePresence mode="wait">
@@ -60,26 +60,36 @@ export default function AnimatedGradientText() {
           key={words[index]}
           initial={{
             opacity: 0,
-            y: 20,
-            filter: 'blur(8px)'
+            y: 30,
+            scale: 0.9,
+            filter: 'blur(10px)'
           }}
           animate={{
             opacity: 1,
             y: 0,
+            scale: 1,
             filter: 'blur(0px)'
           }}
           exit={{
             opacity: 0,
-            y: -20,
-            filter: 'blur(8px)'
+            y: -30,
+            scale: 0.9,
+            filter: 'blur(10px)'
           }}
           transition={{
-            duration: 0.4,
-            ease: [0.22, 1, 0.36, 1] // Apple-style easing
+            duration: 0.6,
+            ease: [0.16, 1, 0.3, 1], // Smooth Apple-style easing
+            opacity: { duration: 0.4 },
+            scale: { duration: 0.5 }
           }}
-          className="absolute left-0 top-0 inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] via-[#f43f5e] via-[#a855f7] via-[#8b5cf6] to-[#3b82f6] animate-shimmer-smooth whitespace-nowrap leading-none"
+          className="absolute left-0 top-0 inline-block bg-clip-text text-transparent whitespace-nowrap"
           style={{
-            backgroundSize: '300% auto',
+            backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%)',
+            backgroundSize: '300% 300%',
+            animation: 'gradient-flow 6s ease-in-out infinite',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            willChange: 'transform, opacity, filter',
           }}
         >
           {words[index]}
